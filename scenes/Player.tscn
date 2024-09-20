@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://drtbpa4xqe42"]
+
+[ext_resource type="Texture2D" uid="uid://dtjmopjx78xs6" path="res://assets/Sprite Sheets/Male_Pixel_Art_Base_Template_64px_Idle.png" id="1_byq1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txguj"]
+size = Vector2(18, 48)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_byq1t")
+hframes = 8
+vframes = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_txguj")
